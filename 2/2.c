@@ -30,7 +30,8 @@ int main(int argc, char ** argv) {
     if(regcomp(&regex_game, game, REG_EXTENDED))
         exit(1);
 
-    int res = 0;
+    int res_p1 = 0;
+    int res_p2 = 0;
     size_t line_len;
     while(getline(&line, &line_len, fp) != -1){
 
@@ -47,12 +48,18 @@ int main(int argc, char ** argv) {
         //printf("r: %d, g: %d, b: %d\n", maxR, maxG, maxB);
 
         if(maxR <= 12 && maxB <= 14 && maxG <= 13)
-            res += game_id;
+            res_p1 += game_id;
+        res_p2 += maxR * maxB * maxG;
     }
-    printf("res: %d\n", res);
+    printf("part1: %d\n", res_p1);
+    printf("part2: %d\n", res_p2);
 
     return 0;
 }
+void part1(){
+
+}
+
 int maxof(const char *s, char * color, regoff_t len){
     regmatch_t match[1];
     regex_t regex;
