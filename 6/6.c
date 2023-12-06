@@ -11,24 +11,10 @@
 
 
 int main(int argc, char ** argv) {
-    FILE *fp;
-    if(argc < 2)
-    {
-        printf("supply input file name\n");
-        exit(1);
-    }
-
-    fp = fopen(argv[1], "r");
-
-    if (fp == NULL) {
-        exit(1);
-    }
 
     int res1 = 1;
     unsigned long long times[] = {56977875};
     unsigned long long distances[] = {546192711311139};
-
-
     for(int i = 0; i < 1; i++)
     {
         long long d = distances[i];
