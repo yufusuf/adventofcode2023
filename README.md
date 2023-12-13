@@ -1,1 +1,2 @@
-solutions for advent of code 2023 in c
+solutions for advent of code 2023 in c/rust
+
